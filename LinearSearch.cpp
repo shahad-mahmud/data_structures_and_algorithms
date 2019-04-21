@@ -1,6 +1,6 @@
 /**
 * 21-04-2019
-* This the implemention of Linear search algorithm
+* This the implementation of Linear search algorithm
 **/
 #include <iostream>
 using namespace std;
