@@ -4,8 +4,10 @@
 # do not ignore directories
 !*/
 
-# do not ignore cpp files
+# do not ignore cpp and python files
 !*.cpp
+!*.py
+
 test.cpp
 
 # do not ignore .gitignore file
