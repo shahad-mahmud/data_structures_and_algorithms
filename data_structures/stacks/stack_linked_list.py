@@ -1,3 +1,11 @@
+"""
+This script contains the implementation of stack data structure using linked list. To optimize
+the pop operations, I have used the doubly linked list. It takes more spaces, but reduce the
+popping time to O(1) from O(n) complexity. This implementation contains the basic functionalities
+including push, pop, peek, get size, check if empty.
+"""
+
+
 class Node(object):
     def __init__(self, value=None, next=None, prev=None) -> None:
         self.value = value
@@ -16,6 +24,11 @@ class Stack(object):
         self._size = 1 if self._tail else 0
 
     def push(self, value: object) -> None:
+        """Push a value into the to of the stack.
+
+        Args:
+            value (object): The value to push.
+        """
         if not self._head:
             self._tail = Node(value)
             self._head = self._tail
@@ -27,6 +40,8 @@ class Stack(object):
         self._size += 1
 
     def pop(self) -> None:
+        """Pop the last or top value from the stack. Raises an exception if the stack is empty."""
+
         assert not self.is_empty(), "Stack is empty. Nothing to pop."
 
         if self._size == 1:
@@ -40,6 +55,11 @@ class Stack(object):
         self._size -= 1
 
     def peek(self) -> object:
+        """Peek the stack and return the top or last element from the stack.
+
+        Returns:
+            object: The top or last element of the stack
+        """
         assert not self.is_empty(), "Stack is empty. Nothing to peek."
 
         return self._tail.value
