@@ -91,12 +91,14 @@ if __name__ == "__main__":
     s.push(6)
 
     print(s)
-    print(s.peek())
 
-    s.pop()
-    print(s)
     print(s.peek())
+    s.pop()
 
-    s.pop()
     print(s.peek())
-    s.pop()  # raise error
+    s.pop()
+
+    print(s.peek())
+    s.pop()
+
+    print(s.peek())  # will raise error
