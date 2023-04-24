@@ -7,5 +7,6 @@
 !*.c
 !*.cpp
 !*.py
+!*.ipynb
 !*.md
 !.gitignore
