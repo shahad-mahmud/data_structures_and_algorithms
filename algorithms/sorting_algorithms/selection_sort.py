@@ -1,6 +1,6 @@
 """
 Iterates the unordered portion of the list and select the minimum/maximum element. Then swap it
-to the front. Sorts the list inplace.
+to the front. Sorts the list inplace. Time: O(n^2), Space: O(1)
 """
 from typing import List
 
@@ -18,4 +18,5 @@ if __name__ == "__main__":
     print(l)
     
     selection_sort(l)
+    assert l == list(sorted(l))
     print(l)
